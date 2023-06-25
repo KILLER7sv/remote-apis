@@ -23,7 +23,9 @@ public class RemoteAliController {
     public MovieResponse getCustomDetails(){
         String url = "https://api.themoviedb.org/3/movie/157336?api_key=d731ebfef4a01365656d87394fd7df68";
         MovieResponse responseObject = restTemplate.getForObject(url , MovieResponse.class);
-        // just enter the class and it will automatically fetch the params we need
+        // this movie response will just fit the response according to that parameters present in the
+        // movie class
+        // just enter the class, it will automatically fetch the params we need
         return responseObject;
     }
 }
